@@ -21,8 +21,6 @@ func _process(_delta):
 
 
 func _on_Area2D_body_entered(_body):
-	print("Entered")
-	
 	var _collision_pos = $Area2D.global_position
 	var _tile_id = _tilemap.get_cellv(_tilemap.world_to_map(_collision_pos))
 	
@@ -30,6 +28,9 @@ func _on_Area2D_body_entered(_body):
 		print("TILE ID 0 - DETECTED")
 	elif _tile_id == 1:
 		print("TILE ID 1 - DETECTED")
+	
+	print("Body Entered")
+	print("tile id ", _tile_id)
 
 
 func _on_Area2D_body_exited(_body):
