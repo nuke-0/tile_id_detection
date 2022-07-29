@@ -22,7 +22,7 @@ func _process(_delta):
 
 func _on_Area2D_body_entered(_body):
 	var _collision_pos = $Area2D.global_position
-	var _tile_id = _tilemap.get_cellv(_tilemap.world_to_map(_collision_pos))
+	var _tile_id = _tilemap.get_cellv(_tilemap.world_to_map(_collision_pos))	#-------- something must be wrong with this
 	
 	if _tile_id == 0:
 		print("TILE ID 0 - DETECTED")
@@ -30,7 +30,7 @@ func _on_Area2D_body_entered(_body):
 		print("TILE ID 1 - DETECTED")
 	
 	print("Body Entered")
-	print("tile id ", _tile_id)
+	print("tile id ", _tile_id)	#-------------------------------------------------------- id is always -1
 
 
 func _on_Area2D_body_exited(_body):
