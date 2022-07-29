@@ -24,9 +24,9 @@ func _on_Area2D_body_entered(_body):
 	var _collision_pos = $Area2D.global_position
 	var _tile_id = _tilemap.get_cellv(_tilemap.world_to_map(_collision_pos))	#-------- something must be wrong with this
 	
-	if _tile_id == 0:
+	if _tile_id == 0:	#---------------------------------------------------------------- doesn't run becuase id is -1
 		print("TILE ID 0 - DETECTED")
-	elif _tile_id == 1:
+	elif _tile_id == 1:	#---------------------------------------------------------------- doesn't run becuase id is -1
 		print("TILE ID 1 - DETECTED")
 	
 	print("Body Entered")
